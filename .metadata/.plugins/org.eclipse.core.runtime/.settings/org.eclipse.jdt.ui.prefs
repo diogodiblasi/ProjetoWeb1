@@ -1,0 +1,8 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="java.lang.Enum"><rhs name\="jakarta.persistence.GenerationType"/></lhs><lhs name\="java.lang.constant.Constable"><rhs name\="jakarta.persistence.GenerationType"/></lhs><lhs name\="java.util.EventObject"><rhs name\="org.springframework.context.event.ContextRefreshedEvent"/></lhs><lhs name\="org.springframework.context.ApplicationEvent"><rhs name\="org.springframework.context.event.ContextRefreshedEvent"/></lhs><lhs name\="br.com.senac.entity.Aluno"><rhs name\="br.com.senac.entity.Aluno"/></lhs><lhs name\="org.springframework.web.servlet.ModelAndView"><rhs name\="org.springframework.web.servlet.ModelAndView"/></lhs><lhs name\="br.com.senac.entity.Professor"><rhs name\="br.com.senac.entity.Professor"/></lhs></history>
+content_assist_number_of_computers=15
+eclipse.preferences.version=1
+org.eclipse.jdt.ui.formatterprofiles.version=22
+spelling_locale_initialized=true
+typefilter_migrated_2=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true
