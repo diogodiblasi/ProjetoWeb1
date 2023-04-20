@@ -11,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import br.com.senac.entity.Turma;
 import br.com.senac.service.AlunoService;
+import br.com.senac.service.CursoService;
 import br.com.senac.service.TurmaService;
 
 @Controller
@@ -21,6 +22,9 @@ public class TurmaController {
 	private TurmaService turmaService;
 	@Autowired
 	private AlunoService alunoService;
+	
+	@Autowired
+	private CursoService cursoSerice;
 	
 	@GetMapping("/listarTurmas")
 	public ModelAndView buscarTodasTurmas() {
@@ -34,6 +38,7 @@ public class TurmaController {
 		ModelAndView mv = new ModelAndView("turma/cadastraTurma");
 		mv.addObject("turma", new Turma());
 		mv.addObject("alunos", alunoService.buscarTodosAlunos());
+		mv.addObject("listaCursos", cursoSerice.buscarTodosCursos());
 		return mv;
 	}
 	
