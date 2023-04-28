@@ -1,0 +1,12 @@
+package br.com.senac.entity;
+
+import jakarta.persistence.Embeddable;
+
+@Embeddable
+public class AlunoCurso {
+	
+	private Aluno aluno;
+	
+	private Curso curso;
+
+}

@@ -1,7 +1,6 @@
 package br.com.senac.service;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.hibernate.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,8 +22,8 @@ public class CursoService {
 		return repoCurso.save(curso);
 	}
 	public Curso buscarPorID(Integer id)throws ObjectNotFoundException{
-		Optional<Curso> curso = repoCurso.findById(id);
-		return curso.orElseThrow(() -> new ObjectNotFoundException(curso, "Curso nao encontrado. Id:" + id));
+		return repoCurso.findById(id).get();
+
 		
 	}
 	

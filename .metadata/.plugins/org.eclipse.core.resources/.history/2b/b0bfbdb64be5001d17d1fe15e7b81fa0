@@ -1,0 +1,25 @@
+package br.com.senac.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import br.com.senac.service.AvaliacaoService;
+
+@RequestMapping("avaliacao")
+@Controller
+public class AvaliacaoController {
+	
+	@Autowired
+	private AvaliacaoService avaliacaoService;
+	
+	private AlunoService alunoService;
+	
+	@GetMapping("/listarAvaliacoes")
+	public void buscarTodasAvaliacoes() {
+		
+	}
+	
+	
+
+}

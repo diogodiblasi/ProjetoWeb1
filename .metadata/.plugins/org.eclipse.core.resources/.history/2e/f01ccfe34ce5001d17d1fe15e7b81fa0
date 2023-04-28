@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http:www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset-8"/>
+<meta name="viewport" content="width=device-width" />
+<title>Cadastro de Aluno</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"></link>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="panel-heading" align="center">
+			<strong>CADASTRO DE AVALIAÇÃO</strong>
+		</div>
+		
+		<div class="panel-body border">
+			<form class="form-horizontal" th:object="${aluno}" th:action="@{/aluno/salvar}" method="post" style="margin: 10px">
+				<div class="form-group">
+					<fieldset>
+						<div class="form-group row">
+							<label>NOME</label>
+							<input type="text" class="form-control input-sm" th:field="*{nome}" autofocus="auto-focus" placeholder="Informe o nome" maxlength="50"/>
+						</div>
+						<div class="form-grou row">
+							<label>ALUNO</label>
+							<select class="form-crontrol th:field="*{turma}>
+								<option value="">Selecione uma turma</option>
+								<option th:each="turma : ${turmas}" th:value= "${turma.id}" th:text="${turma.nome}"> </option>
+							</select>
+						</div>
+					</fieldset>
+				</div>
+				<div align="center">
+					<button type="submit" class="btn btn-sm btn-success">SALVAR</button>
+					<a th:href="@{/aluno/listarAluno}" class="btn btn-sm btn-default">CANCELAR</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

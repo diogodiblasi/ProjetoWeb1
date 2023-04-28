@@ -8,6 +8,7 @@ import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 
 import br.com.senac.entity.Aluno;
+import br.com.senac.entity.Curso;
 import br.com.senac.entity.Professor;
 import br.com.senac.entity.Turma;
 import br.com.senac.service.AlunoService;
@@ -90,7 +91,11 @@ public class Init implements ApplicationListener<ContextRefreshedEvent>{
 			System.out.println(professor.getNome());
 		}
 		
+		Curso curso = new Curso();
+		curso.setNome("SpringBoot");
 		
+		Professor professor = new Professor();
+		professor.setNome("Diogo");
 		
 	}
 

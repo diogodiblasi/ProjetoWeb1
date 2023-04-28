@@ -1,0 +1,14 @@
+package br.com.senac.entity;
+
+import jakarta.persistence.EmbeddedId;
+import jakarta.persistence.Entity;
+
+@Entity
+public class Avaliacao {
+	
+	@EmbeddedId
+	private AlunoCurso alunoCurso;
+	
+	private String conceito;
+
+}
